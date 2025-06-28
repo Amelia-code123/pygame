@@ -48,7 +48,11 @@ def update(ti):
             i.y=600
             i.vy=-i.vy*0.9
         i.x+=i.vx*ti
-        if i.x<50 or i.x>650:
+        if i.x<50:
+            i.x=50
+            i.vx=-i.vx
+        elif i.x>650:
+            i.x=650
             i.vx=-i.vx
 
 def on_key_down(key):
